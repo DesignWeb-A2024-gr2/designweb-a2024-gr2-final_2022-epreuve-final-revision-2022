@@ -1,0 +1,124 @@
+:root {
+    --couleur-bg: #000;
+    --couleur-texte: #cb0000;
+    --couleur-select-de: #f20000;
+    --couleur-bouton: #890000;
+    --couleur-hover-de: #f20000;
+    --couleur-texte-bouton: #ffffff;
+    --largeur-img-de: 100px;
+    --couleur-bg-resultat: rgba(128, 128, 128, 0.725);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-image: url('../images/background.jpg');
+    background-position: top 40px center;
+    background-repeat: no-repeat;
+
+    color: var(--couleur-texte);
+    background-color: var(--couleur-bg);
+}
+
+.conteneur-principale {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: auto;
+}
+
+.titre {
+    font-size: 5em;
+}
+
+
+/* ========================================== */
+/* Section séletion des dés                   */
+/* ========================================== */
+
+.selection-des {
+    width: 480px;
+}
+
+.selected {
+    filter: drop-shadow(1px 1px 5px var(--couleur-select-de))
+            drop-shadow(-1px 1px 5px var(--couleur-select-de))
+            drop-shadow(1px -1px 5px var(--couleur-select-de))
+            drop-shadow(-1px -1px 5px var(--couleur-select-de));
+    transform: scale(1.10);
+}
+
+.de {
+    cursor: pointer;
+    text-align: center;
+    margin: 0px auto
+}
+
+/* ========================================== */
+/* Section options de jet                     */
+/* ========================================== */
+.option-jet {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    font-size: 3em;
+}
+
+.texte-type-de {
+    width: 90px;
+}
+.texte-nombre-jet {
+    width: 40px;
+    text-align: left;
+}
+
+.bouton-jet {
+    border: none;
+    padding: 10px 20px;
+    background-color: var(--couleur-bouton);
+    color: var(--couleur-texte-bouton);
+    font-size: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px black;
+}
+
+.bouton-jet:hover {
+    transform: translateY(5px);
+    box-shadow: 0 0 black;
+}
+
+/* ========================================== */
+/* Section resultats                          */
+/* ========================================== */
+.resultats {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    background-color: var(--couleur-bg-resultat);
+    height: 100px;
+    border-radius: 5px;
+    outline: 2px solid var(--couleur-texte);
+}
+
+.de-resultat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    font-size: 2em;
+}
+
+/* ========================================== */
+/* Crédit photos                              */
+/* ========================================== */
+footer {
+    position: fixed;
+    padding: 20px;
+    bottom: 20px;
+}
